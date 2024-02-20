@@ -6,3 +6,10 @@ on:
       - 'main'
   pull_request:
   workflow_dispatch:
+
+jobs:
+    job_name:
+        steps:
+          - uses: actions/checkout@v2
+          - run: npm install
+          - run: npm check-rules
